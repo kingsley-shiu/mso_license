@@ -25,7 +25,6 @@ def get_hk_mso():
     return df_mso
 
 
-# %%
 def get_sg_mso():
 
     session = HTMLSession()
