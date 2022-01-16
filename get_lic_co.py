@@ -7,11 +7,11 @@ from requests_html import HTMLSession
 
 def get_hk_mso():
     session = HTMLSession()
+    
     url_auth = "https://eservices.customs.gov.hk/MSOS/wsrh/001s1w?searchBy=ALL"
-
     url = "https://eservices.customs.gov.hk/MSOS/wsrh/loadSearchLicenseGrid?searchBy=ALL&rowsPerPage=99999&currPage=1"
 
-    r = session.get(url_auth)
+    r = session.get(url_auth) #sync the agreement in session
     r = session.get(url)
 
     mso = r.content
