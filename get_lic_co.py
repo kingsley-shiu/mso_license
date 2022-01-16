@@ -51,5 +51,5 @@ def get_sg_mso():
 df_hk_mso = get_hk_mso()
 df_sg_mso = get_sg_mso()
 df_mso = pd.concat([df_hk_mso, df_sg_mso])
-
+df_mso.to_csv('mso_list.csv', index=None)
 # %%
